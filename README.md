@@ -9,6 +9,28 @@ magnet:?xt=urn:btih:5701cbb1351c4ced4e656c94296e1dda2637560d&dn=USSouthwest_Inst
 
 Free add-on, not for sale. Not affiliated with or endorsed by Benchmark Sims.
 
+## Installing: standard or high resolution
+
+| | Standard | High resolution |
+|---|---|---|
+| Ground textures | 4K tiles, 15.6 m per pixel | 4K tiles plus 16K tiles, 3.9 m per pixel |
+| Download | 37 GB (24 of the torrent's 80 files) | 140 GB (all 80 files) |
+| Installed | 54 GB | 225 GB |
+
+Everything else is the same in both: airfields, buildings, bridges, lights, night textures, campaigns.
+
+**Standard install**
+
+1. Open the magnet link. In your torrent client's file list, untick `USSouthwest-003.pak` to `USSouthwest-058.pak` (56 files): they hold nothing but the 16K ground tiles.
+2. Download **[USSouthwest_Setup.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Setup.exe)** and put it into the download folder, next to the data files. Leave the `Setup.exe` that came with the torrent where it is: that first Setup only knows the full install.
+3. Close Falcon BMS and run `USSouthwest_Setup.exe`. "Standard install" is preselected.
+
+**High resolution**
+
+Download all 80 files and choose "High resolution" in `USSouthwest_Setup.exe`. You can also add it later: let the torrent client fetch the 56 files you left out into the same folder, run `USSouthwest_Setup.exe` again and choose "High resolution". Nothing that is already installed is copied again.
+
+If you installed version 1.0.1 with the `Setup.exe` from the torrent, you have the high-resolution install already. Nothing changes for you.
+
 ## Updating or checking an installed theater
 
 1. Download **[USSouthwest_Updater.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Updater.exe)**.
