@@ -22,7 +22,7 @@ Everything else is the same in both: airfields, buildings, bridges, lights, nigh
 **Standard install**
 
 1. Open the magnet link. In your torrent client's file list, untick `USSouthwest-003.pak` to `USSouthwest-058.pak` (56 files): they hold nothing but the 16K ground tiles.
-2. Download **[USSouthwest_Setup.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Setup.exe)** and put it into the download folder, next to the data files. Leave the `Setup.exe` that came with the torrent where it is: that first Setup only knows the full install.
+2. Download **[USSouthwest_Setup.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Setup.exe)** and put it into the download folder, next to the data files. (Started from anywhere else, it asks for that folder: button "Data folder...".) Leave the `Setup.exe` that came with the torrent where it is: that first Setup only knows the full install.
 3. Close Falcon BMS and run `USSouthwest_Setup.exe`. "Standard install" is preselected.
 
 **High resolution**
