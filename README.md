@@ -2,7 +2,7 @@
 
 This repository hosts the **updater** of the US Southwest add-on theater and the files it downloads.
 
-**Latest version: 1.0.2** (25 November 2026, a 91 MB update): taxi and take-off roll are smooth on every airfield, no more explosions at lift-off or low over towns on sloping ground, sharp painted pavement at 524 airfields. Run the updater below to get it; what changed is listed with each release.
+**Latest version: 1.0.3** (25 November 2026, a 95 MB update on top of the 1.0.1 download): taxi and take-off roll are smooth on every airfield, no more explosions at lift-off or low over towns on sloping ground, sharp painted pavement at 524 airfields. 1.0.3 restores the airfield lights that 1.0.2 switched off. Run the updater below to get it; what changed is listed with each release.
 
 The theater itself (a 140 GB download) is distributed by torrent:
 
