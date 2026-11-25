@@ -1,6 +1,9 @@
 # US Southwest theater for Falcon BMS 4.38.2 - updater and updates
 
 This repository hosts the **updater** of the US Southwest add-on theater and the files it downloads.
+
+**Latest version: 1.0.2** (25 November 2026, a 91 MB update): taxi and take-off roll are smooth on every airfield, no more explosions at lift-off or low over towns on sloping ground, sharp painted pavement at 524 airfields. Run the updater below to get it; what changed is listed with each release.
+
 The theater itself (a 140 GB download) is distributed by torrent:
 
 ```
@@ -13,7 +16,7 @@ Free add-on, not for sale. Not affiliated with or endorsed by Benchmark Sims.
 
 | | Standard | High resolution |
 |---|---|---|
-| Ground textures | 4K tiles, 15.6 m per pixel | 4K tiles plus 16K tiles, 3.9 m per pixel |
+| Ground textures | Landsat satellite imagery, 15.6 m per pixel | adds NAIP aerial photography, 3.9 m per pixel |
 | Download | 37 GB (24 of the torrent's 80 files) | 140 GB (all 80 files) |
 | Installed | 54 GB | 225 GB |
 
