@@ -1,63 +1,62 @@
-# US Southwest theater for Falcon BMS 4.38.2 - updater and updates
+# US Southwest theater for Falcon BMS 4.38.2
 
-This repository hosts the **updater** of the US Southwest add-on theater and the files it downloads.
-
-**Latest version: 1.0.3** (25 November 2026, a 95 MB update on top of the 1.0.1 download): taxi and take-off roll are smooth on every airfield, no more explosions at lift-off or low over towns on sloping ground, sharp painted pavement at 524 airfields. 1.0.3 restores the airfield lights that 1.0.2 switched off. Run the updater below to get it; what changed is listed with each release.
-
-The theater itself (a 140 GB download) is distributed by torrent:
-
-```
-magnet:?xt=urn:btih:5701cbb1351c4ced4e656c94296e1dda2637560d&dn=USSouthwest_Installer_1.0.1&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce
-```
+The US Southwest add-on theater: the western United States and northern Mexico on a 2,048 km square, with 783 airfields,
+generated buildings, real aerial imagery, night lighting, an objective network and five campaigns.
 
 Free add-on, not for sale. Not affiliated with or endorsed by Benchmark Sims.
 
-## Installing: standard or high resolution
+## Install, update, repair: one program
+
+Download **[USSouthwest_Installer.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Installer.exe)** and run it with Falcon BMS closed.
+It is not code-signed, so Windows SmartScreen may warn: "More info", then "Run anyway".
+
+It finds your BMS folder (or choose it with **Browse...**) and then:
+
+- **Not installed yet:** choose the ground textures and real weather, then **Install**. Everything is downloaded from this page,
+  file by file, and every file is checked against its SHA-256 checksum before it is written. If the download is interrupted, run the
+  program again: **Continue install** picks up where it stopped.
+- **Installed:** **Update** downloads only the files that changed since your version. **Check files** compares every installed file
+  with the published list (seconds); **Full check** reads every file and compares its checksum (slow from a hard disk; changes nothing).
+  Anything damaged or missing is downloaded again.
+- **Uninstall** removes the theater folder, its models and textures, its line in BMS's theater list and the real-weather program.
+  Stock BMS files are never changed.
 
 | | Standard | High resolution |
 |---|---|---|
 | Ground textures | Landsat satellite imagery, 15.6 m per pixel | adds NAIP aerial photography, 3.9 m per pixel |
-| Download | 37 GB (24 of the torrent's 80 files) | 140 GB (all 80 files) |
-| Installed | 54 GB | 225 GB |
+| Download | about 42 GB | about 147 GB |
+| On disk | about 61 GB | about 231 GB |
 
-Everything else is the same in both: airfields, buildings, bridges, lights, night textures, campaigns.
+Both also need a copy of your own BMS `Data\Sounds` folder (the theater adds its spoken airfield names to that copy; no original BMS
+audio is distributed). Everything else is the same in both: airfields, buildings, bridges, lights, night textures, campaigns.
+The high-resolution ground can be added later with its tick box, then **Update**. Unticking it removes the high-resolution tiles
+after a warning that asks you to confirm.
 
-**Standard install**
+**Real weather** (optional, a tick box): a small program starts with Windows and waits; while BMS runs it downloads NOAA's free
+forecast (about 1 MB per hour) and keeps the weather of the theater's missions current. It contacts NOAA and nothing else.
 
-1. Open the magnet link. In your torrent client's file list, untick `USSouthwest-003.pak` to `USSouthwest-058.pak` (56 files): they hold nothing but the 16K ground tiles.
-2. Download **[USSouthwest_Setup.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Setup.exe)** and put it into the download folder, next to the data files. (Started from anywhere else, it asks for that folder: button "Data folder...".) Leave the `Setup.exe` that came with the torrent where it is: that first Setup only knows the full install.
-3. Close Falcon BMS and run `USSouthwest_Setup.exe`. "Standard install" is preselected.
+After installing: start Falcon BMS, choose **US Southwest** in the Theater menu, then restart BMS.
 
-**High resolution**
+## Unattended use
 
-Download all 80 files and choose "High resolution" in `USSouthwest_Setup.exe`. You can also add it later: let the torrent client fetch the 56 files you left out into the same folder, run `USSouthwest_Setup.exe` again and choose "High resolution". Nothing that is already installed is copied again.
+```
+USSouthwest_Installer.exe /silent [/bms="X:\your BMS folder"]
+    /install [/hires] [/weather=on|off]      fresh install
+    /check | /fullcheck | /update            check, or bring an install to the latest version
+    /ground=16K | /ground=4K [/update]       high-resolution ground on or off
+    /uninstall
+    [/log=file]
+```
 
-If you installed version 1.0.1 with the `Setup.exe` from the torrent, you have the high-resolution install already. Nothing changes for you.
-
-## Updating or checking an installed theater
-
-1. Download **[USSouthwest_Updater.exe](https://github.com/eastwoodtattoo/USSouthwest-Theater/releases/latest/download/USSouthwest_Updater.exe)**.
-   It is not code-signed, so Windows SmartScreen may warn: "More info", then "Run anyway".
-2. Close Falcon BMS.
-3. Run the updater. It finds your BMS folder, shows the installed and the latest version, and offers:
-   - **Check files** - compares every installed file with the published list (size and date; takes seconds).
-   - **Full check** - reads every installed file and compares its SHA-256 checksum (about 225 GB; takes a long time from a hard disk). Changes nothing.
-   - **Update** - downloads only the files that changed and writes them. Every file is checked against its checksum before it replaces the installed one.
-
-The updater only works on a theater that was installed with `Setup.exe` from the full download.
-It never changes a stock BMS file. Setup's Uninstall still removes everything after updates.
-
-If a check finds damaged files that are not part of an update, the updater can restore them from your original
-download: button **Use my download...**, then choose the folder with the `USSouthwest-0xx.pak` files.
-
-Unattended use: `USSouthwest_Updater.exe /silent [/bms="X:\your BMS folder"] [/check | /fullcheck | /update] [/data=<folder with the .pak files>] [/log=file]`
-(exit code 0 = nothing to do or done, 1 = stopped with a reason in the log, 3 = an update or repair is waiting).
+Exit code 0 = nothing to do or done, 1 = stopped with a reason in the log, 2 = error, 3 = (check) an update or repair is waiting.
 
 ## What is in a release here
 
 | File | What it is |
 |---|---|
-| `USSouthwest_Updater.exe` | the updater |
-| `latest.json` | which version is the latest |
-| `USSouthwest-1.0.1.idx.gz` | the file list of the full package, with the SHA-256 of every file |
-| `update-<version>.idx`, `update-<version>-NNN.pak` | the files that differ from version 1.0.1 (every update is cumulative) |
+| `USSouthwest_Installer.exe` | the program (install, update, repair, uninstall) |
+| `latest.json` | which version is the latest and where its files are |
+| `USSouthwest-1.0.1.idx.gz`, `update-<version>.idx` | the file lists, with the SHA-256 of every file |
+| `update-<version>-NNN.pak` | the files that changed in that version (files that did not change stay in the release that brought them) |
+
+The data of version 1.0.1 is in the release `base-1.0.1`. The program reads only the parts of each data file it needs.
