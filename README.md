@@ -35,6 +35,12 @@ after a warning that asks you to confirm.
 **Real weather** (optional, a tick box): a small program starts with Windows and waits; while BMS runs it downloads NOAA's free
 forecast (about 1 MB per hour) and keeps the weather of the theater's missions current. It contacts NOAA and nothing else.
 
+**Offline:** download the files from the release pages with any download manager, put them all into one folder, then click
+**Local files...** and choose that folder (or `/data="X:\that folder"`). Everything found there is read from there; only what is
+missing is downloaded. For 1.0.4: `latest.json`, `USSouthwest-1.0.1.idx.gz`, `update-1.0.4.idx` and all `update-1.0.4-NNN.pak`
+(release `updates-1.0.4`), `update-1.0.3-001.pak` (release `updates-1.0.3`) and, for a fresh install or a repair, the
+`USSouthwest-NNN.pak` files of release `base-1.0.1` (the 1.0.1 torrent download holds the same files).
+
 After installing: start Falcon BMS, choose **US Southwest** in the Theater menu, then restart BMS.
 
 ## Unattended use
